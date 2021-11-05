@@ -8,7 +8,7 @@ public class Instanciador : MonoBehaviour
 
 
     float intervalo;
-    [SerializeField] GameObject columna;
+    [SerializeField] GameObject Obstaculo;
     [SerializeField] Transform instantiatePos;
 
 
@@ -22,7 +22,7 @@ public class Instanciador : MonoBehaviour
             //print("Hola");
             float randomX = Random.Range(-14f, 14f);
             Vector3 newPos = new Vector3(randomX, instantiatePos.position.y, instantiatePos.position.z);
-            Instantiate(columna, newPos, Quaternion.identity);
+            Instantiate(Obstaculo, newPos, Quaternion.identity);
 
             yield return new WaitForSeconds(intervalo);
         }

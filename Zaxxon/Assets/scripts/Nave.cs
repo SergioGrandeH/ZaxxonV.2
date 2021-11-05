@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovNave : MonoBehaviour
+public class Nave : MonoBehaviour
 {
     public float SpeedForward;
     public float SpeedSides;
@@ -41,8 +41,6 @@ public class MovNave : MonoBehaviour
 
         float desp1H = Input.GetAxis("Horizontal");
         float desp1V = Input.GetAxis("Vertical");
-        float desp1F = Input.GetAxis("Forward");
-        float desp1R = Input.GetAxis("Rotacion");
 
         
 
@@ -72,14 +70,8 @@ public class MovNave : MonoBehaviour
 
 
 
-        if ((posZ <= 10f || desp1F < 0f) && (posZ > 1f || desp1F > 0f))
-        {
-            transform.Translate(Vector3.forward * Time.deltaTime * SpeedForward * desp1F, Space.World);
-        }
 
 
-
-        transform.Rotate(0F, 0F, desp1R * Time.deltaTime * RotationSpeed);
         //print(desp1R);
 
 
